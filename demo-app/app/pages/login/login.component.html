@@ -1,0 +1,4 @@
+<div *ngIf="oAuth2Service.loggedIn" style="padding: 20px">
+  <button (click)="oAuth2Service.logout()">Logout</button>
+</div>
+<scn-login *ngIf="!oAuth2Service.loggedIn" [facebook]="true"></scn-login>

@@ -1,0 +1,31 @@
+<div class="file-upload">
+  <label class="button">
+    Upload Image
+    <input [hidden]="true" id="custom-input" type="file" (change)="fileChangeListener($event)">
+  </label>
+</div>
+<div class="images-wrapper">
+  <div>
+    <img-cropper #cropper
+                 [hidden]="!cropperData.image"
+                 [image]="cropperData"
+                 [settings]="cropperSettings"></img-cropper>
+  </div>
+  <div class="results" [ngClass]="{rounded: imageUploadSettings.rounded}">
+    <div class="result-big">
+      <img [src]="cropperData.image"
+           [hidden]="!cropperData.image"
+           [width]="imageUploadSettings.previewWidth"
+           [height]="imageUploadSettings.previewHeight">
+    </div>
+    <div class="result-small">
+      <img [src]="cropperData.image"
+           [hidden]="!cropperData.image"
+           [width]="imageUploadSettings.previewWidth / 2"
+           [height]="imageUploadSettings.previewHeight / 2">
+    </div>
+  </div>
+</div>
+<div *ngIf="cropperData.image">
+  <button (click)="save()">Save</button>
+</div>

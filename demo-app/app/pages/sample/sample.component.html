@@ -1,0 +1,22 @@
+<div class="example">
+  <div *ngIf="uploadImgLink">
+    <h3>Upload Image</h3>
+    <div>
+      <img [src]="uploadImgLink">
+    </div>
+  </div>
+
+  <div>
+    <h3>Image upload</h3>
+    <scn-image-upload (onChangeImage)="onChangeImage($event)">
+    </scn-image-upload>
+  </div>
+
+  <div>
+    <h3>Image upload rounded</h3>
+    <scn-image-upload [imageUploadSettings]="imageUploadSettings"
+                      (onChangeImage)="onChangeImage($event)">
+    </scn-image-upload>
+  </div>
+
+</div>
