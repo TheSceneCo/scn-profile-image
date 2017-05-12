@@ -1,6 +1,6 @@
 {
   "name": "@thescene/scn-image-upload",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "src/index.ts",
   "typings": "src/index.ts",
@@ -32,7 +32,7 @@
     "@angular/router": "^4.0.0",
     "@ngx-translate/core": "^6.0.1",
     "@ngx-translate/http-loader": "0.0.3",
-    "@thescene/scn-login": "^0.0.17",
+    "@thescene/scn-login": "~0.0.17",
     "@thescene/scn-theme": "^1.0.3",
     "@thescene/thescene-api-library": "^0.1.23",
     "core-js": "^2.4.1",
